@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eunoia | Mental Health Advocacy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Eunoia | Mental Health Advocacy </title>
+    
+    <!-- Fonts: Inter for high readability in body text -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -25,9 +28,9 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h2>Your Voice, Beautifully Minded.</h2>
-            <p>Advocating for mental health awareness, rights, and accessible support for everyone.</p>
-            <a href="#support" class="btn">Get Support Now</a>
+            <h2>Your Voice,<br>Beautifully Minded.</h2>
+            <p>Advocating for mental health awareness and accessible support across the UAE.</p>
+            <a href="#support" class="btn">Find Support Now</a>
         </div>
     </header>
 
@@ -35,69 +38,51 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About Eunoia</h2>
-            <p>Derived from the Greek word for "well-mind" or "beautiful thinking," Eunoia is dedicated to ensuring that no one faces mental health challenges alone. We empower individuals to have a say in their care and their future.</p>
+            <p class="lead-text">"Eunoia" represents a well-mind and beautiful thinking. We are a grassroots advocacy platform dedicated to ensuring that every individual in the UAE has the power to influence their own mental health journey through support and involvement.</p>
         </div>
     </section>
 
-    <!-- Support Services -->
+    <!-- Support & UAE Hotlines -->
     <section id="support" class="section bg-light">
         <div class="container">
-            <h2>Support Resources</h2>
+            <h2>UAE Mental Health Support</h2>
+            <p>If you are in distress, please reach out to these professional services immediately.</p>
+            
+            <div class="crisis-box">
+                <h3>Emergency & Crisis Lines</h3>
+                <div class="hotline-grid">
+                    <div class="hotline-item"><strong>999</strong>Emergency Services</div>
+                    <div class="hotline-item"><strong>800-4673</strong>HOPE Mental Support</div>
+                    <div class="hotline-item"><strong>800-111</strong>DHA (Dubai Health)</div>
+                    <div class="hotline-item"><strong>800-725462</strong>SAKINA (National)</div>
+                </div>
+            </div>
+
             <div class="grid">
                 <div class="card">
                     <h3>Peer Advocacy</h3>
-                    <p>Connect with trained advocates who have lived experience and understand your journey.</p>
+                    <p>Connect with advocates who have lived experience and can walk beside you.</p>
                 </div>
                 <div class="card">
                     <h3>Rights & Advice</h3>
-                    <p>Information on your legal rights regarding mental health care and workplace adjustments.</p>
+                    <p>Guidance on UAE mental health laws and workplace support rights.</p>
                 </div>
                 <div class="card">
-                    <h3>Crisis Resources</h3>
-                    <p>Immediate links and contact numbers for urgent mental health assistance.</p>
+                    <h3>Resources</h3>
+                    <p>Self-help toolkits designed for the unique cultural context of the Emirates.</p>
                 </div>
             </div>
         </div>
     </section>
-<section id="support" class="section bg-light">
-    <div class="container">
-        <h2>Emergency Hotlines</h2>
-        
-        <!-- Emergency Box for UAE -->
-        <div class="crisis-box">
-            <h3>Immediate Help (UAE)</h3>
-            <p>If you are in immediate danger, please call <strong>999</strong>.</p>
-            <div class="hotline-grid">
-                <div class="hotline-item"><strong>800-SAKINA (725462)</strong><br>Abu Dhabi/National (24/7)</div>
-                <div class="hotline-item"><strong>800-111</strong><br>Dubai Health Authority (24/7)</div>
-                <div class="hotline-item"><strong>800-HOPE (4673)</strong><br>National Support Line (8am-8pm)</div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Peer Advocacy</h3>
-                <p>Connect with trained advocates who have lived experience and understand your journey.</p>
-            </div>
-            <div class="card">
-                <h3>Rights & Advice</h3>
-                <p>Information on your legal rights regarding mental health care and workplace adjustments.</p>
-            </div>
-            <div class="card">
-                <h3>Crisis Resources</h3>
-                <p>Digital guides and tools to help manage panic attacks and high-stress moments.</p>
-            </div>
-        </section> 
 
     <!-- Participation -->
     <section id="participation" class="section">
         <div class="container">
             <h2>Get Involved</h2>
-            <p>Advocacy is a collective effort. Join our community to help shape mental health policy.</p>
             <div class="participation-options">
-                <div class="p-item"><strong>Volunteer:</strong> Become a community listener.</div>
-                <div class="p-item"><strong>Campaign:</strong> Join our "Mind the Gap" legislative initiative.</div>
-                <div class="p-item"><strong>Share:</strong> Tell your story to inspire others.</div>
+                <div class="p-item"><strong>Volunteer:</strong> Join our team of community listeners.</div>
+                <div class="p-item"><strong>Campaign:</strong> Help us normalize mental health conversations in schools.</div>
+                <div class="p-item"><strong>Share:</strong> Contribute your story to our "Voices of Eunoia" gallery.</div>
             </div>
         </div>
     </section>
@@ -107,20 +92,19 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="How can we help you?" rows="5" required></textarea>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
             <div id="form-response"></div>
         </div>
     </section>
 
-        </div>
-    </div>
-</section>
     <footer>
-        <p>&copy; 2026 Eunoia Advocacy. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Eunoia Advocacy. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
