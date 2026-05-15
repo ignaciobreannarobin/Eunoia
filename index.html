@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eunoia | Mental Health Advocacy </title>
+    <title>Eunoia | Mental Health Advocacy UAE</title>
     
-    <!-- Fonts: Inter for high readability in body text -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <h1 class="logo">EUNOIA</h1>
@@ -25,7 +22,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h2>Your Voice,<br>Beautifully Minded.</h2>
@@ -34,7 +30,6 @@
         </div>
     </header>
 
-    <!-- About Us -->
     <section id="about" class="section">
         <div class="container">
             <h2>About Eunoia</h2>
@@ -43,11 +38,9 @@
         </div>
     </section>
 
-    <!-- Support & UAE Hotlines -->
     <section id="support" class="section bg-light">
         <div class="container">
             <h2>UAE Mental Health Support</h2>
-            <p>If you are in distress, please reach out to these professional services immediately.</p>
             
             <div class="crisis-box">
                 <h3>Emergency & Crisis Lines</h3>
@@ -76,29 +69,40 @@
         </div>
     </section>
 
-    <!-- Participation -->
     <section id="participation" class="section">
         <div class="container">
             <h2>Get Involved</h2>
             <div class="participation-options">
                 <div class="p-item"><strong>Volunteer:</strong> Join our team of community listeners.</div>
-                <div class="p-item"><strong>Campaign:</strong> Help us normalize mental health conversations in schools.</div>
-                <div class="p-item"><strong>Share:</strong> Contribute your story to our "Voices of Eunoia" gallery.</div>
+                <div class="p-item"><strong>Campaign:</strong> Help us normalize mental health conversations.</div>
+                <div class="p-item"><strong>Share:</strong> Contribute your story to our "Voices" gallery.</div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="section bg-light">
         <div class="container">
             <h2>Contact Us</h2>
+            
             <form id="contact-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="How can we help you?" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn" id="submit-btn">Send Message</button>
             </form>
-            <div id="form-response"></div>
+
+            <div id="form-success" style="display: none;">
+                <div class="success-card">
+                    <h3>Submitted!</h3>
+                    <p>Thank you for reaching out. We have received your message.</p>
+                </div>
+            </div>
         </div>
     </section>
 
