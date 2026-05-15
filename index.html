@@ -4,48 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eunoia | Mental Health Advocacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">Eunoia</div>
+        <div class="logo">EUNOIA</div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#support">Support</a></li>
             <li><a href="#volunteer">Volunteer</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-btn">Contact</a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>Beautiful Thinking.</h1>
-        <p>A sanctuary for mental wellness and advocacy.</p>
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Beautiful Thinking.</h1>
+            <p>Advocating for mental wellness across the Emirates.</p>
+        </div>
     </header>
 
     <section id="about" class="section">
-        <h2>About Us</h2>
-        <div class="content">
-            <p class="definition"><strong>Eunoia</strong> /yoo-noy-uh/ (n.): <em>Beautiful thinking; a well-mind; goodwill.</em></p>
-            <p>Our mission is to foster a community where mental health is prioritized, understood, and supported without stigma. We believe that a "well-mind" is the foundation of a flourishing life.</p>
+        <div class="about-container">
+            <h2>About Us</h2>
+            <div class="definition-box">
+                <span class="phonetic">/yoo-noy-uh/</span>
+                <p class="main-def"><strong>Eunoia</strong> (n.): <em>Beautiful thinking; a well-mind; goodwill.</em></p>
+            </div>
+            <p class="mission-text">Our mission is to foster a community where mental health is prioritized and supported without stigma. We believe that a "well-mind" is the foundation of a flourishing life.</p>
         </div>
     </section>
 
     <section id="support" class="section bg-alt">
         <h2>Support & Resources</h2>
         <div class="grid">
-            <div class="card">
+            <div class="support-card">
                 <h3>UAE Emergency Hotlines</h3>
-                <ul>
-                    <li><strong>Estijaba (Mental Health):</strong> 800 1717</li>
-                    <li><strong>Amal Counseling:</strong> 800 4673 (HOPE)</li>
-                    <li><strong>Police:</strong> 999</li>
-                    <li><strong>Ambulance:</strong> 998</li>
-                </ul>
+                <div class="phone-box">
+                    <span class="label">Estijaba (Mental Health)</span>
+                    <span class="number">800 1717</span>
+                </div>
+                <div class="phone-box">
+                    <span class="label">Amal Counseling</span>
+                    <span class="number">800 4673</span>
+                </div>
+                <div class="phone-box">
+                    <span class="label">Police</span>
+                    <span class="number">999</span>
+                </div>
             </div>
-            <div class="card">
+
+            <div class="tips-card">
                 <h3>Wellness Tips</h3>
-                <ul>
+                <ul class="styled-list">
                     <li>Practice 4-7-8 breathing techniques.</li>
                     <li>Maintain a consistent sleep schedule.</li>
                     <li>Set boundaries with digital consumption.</li>
@@ -57,8 +70,8 @@
 
     <section id="volunteer" class="section">
         <h2>Volunteer</h2>
-        <p>You don't need to be a professional to be a presence. Help us organize workshops, distribute resources, or manage our community forums.</p>
-        <button class="btn">Learn How to Help</button>
+        <p>Your presence makes a difference. Help us organize workshops or manage our community forums.</p>
+        <button class="btn main-btn">Become a Volunteer</button>
     </section>
 
     <section id="contact" class="section bg-alt">
@@ -67,13 +80,13 @@
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" id="submitBtn" class="btn">Send Message</button>
         </form>
-        <div id="formStatus"></div>
+        <div id="formStatus" class="status-box"></div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Eunoia Advocacy. Built for a Well-Mind.</p>
+        <p>&copy; 2026 Eunoia Advocacy. UAE Mental Health Support.</p>
     </footer>
 
     <script src="script.js"></script>
