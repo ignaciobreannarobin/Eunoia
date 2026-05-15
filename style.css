@@ -6,45 +6,36 @@
     --thistle: #C6BADE;
 }
 
-* {
-    margin: 0; padding: 0; box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--violet);
-    background-color: #fff;
-    scroll-behavior: smooth;
+    line-height: 1.8;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Fallback for Bodoni Poster */
-    font-weight: 900;
-}
-
-/* 1. Bigger Logo */
+/* Header/Logo */
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2.8rem; /* Even larger */
     font-weight: 900;
-    letter-spacing: 2px;
-    color: var(--violet);
+    letter-spacing: 4px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 1.5rem 10%;
     background: #fff;
-    border-bottom: 1px solid var(--mimi);
-    position: sticky; top: 0; z-index: 100;
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-nav ul { display: flex; list-style: none; align-items: center;}
-nav ul li a { text-decoration: none; color: var(--violet); margin-left: 2rem; font-weight: 600; font-size: 0.9rem;}
+nav ul { display: flex; list-style: none; }
+nav ul li a { text-decoration: none; color: var(--violet); margin-left: 2.5rem; font-weight: 600; }
 
-/* 2. Hero with Gradient Background */
+/* Hero */
 .hero {
     height: 70vh;
     background: linear-gradient(135deg, var(--mimi) 0%, var(--thistle) 50%, var(--pink) 100%);
@@ -54,69 +45,109 @@ nav ul li a { text-decoration: none; color: var(--violet); margin-left: 2rem; fo
     text-align: center;
 }
 
-.hero h1 { font-size: 5rem; color: var(--violet); margin-bottom: 10px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); margin-bottom: 20px; }
 
-/* 3. About Us - Highlighted Definition */
-.section { padding: 80px 10%; text-align: center; }
-.definition-box {
-    background: var(--mimi);
-    padding: 40px;
-    border-radius: 20px;
-    margin: 30px auto;
-    max-width: 800px;
-    border-left: 8px solid var(--blush);
-}
+/* About Us & Definition - Improved Font/Color */
+.section { padding: 100px 10%; text-align: center; }
 
-.main-def { font-size: 1.8rem; line-height: 1.2; margin-top: 10px; }
-.phonetic { font-family: 'Montserrat'; font-weight: 300; opacity: 0.7; }
-
-/* 4. Support - 3D/Eye-catching Boxes */
-.bg-alt { background-color: #faf7f9; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-
-.phone-box {
+.definition-wrapper {
     background: #fff;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 6px 6px 12px #e0dae0, -6px -6px 12px #ffffff; /* 3D Neumorphism effect */
-    transition: transform 0.2s;
+    border: 2px solid var(--mimi);
+    border-left: 12px solid var(--blush);
+    padding: 50px;
+    border-radius: 24px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 15px 30px rgba(74, 50, 103, 0.05);
 }
 
-.phone-box:hover { transform: translateY(-3px); }
-.number { font-size: 1.5rem; font-weight: 900; color: var(--blush); }
+.phonetic { font-weight: 300; letter-spacing: 3px; display: block; margin-bottom: 10px; color: var(--blush); }
+.word { font-family: 'Playfair Display', serif; font-size: 3rem; display: block; color: var(--violet); }
+.meaning { font-size: 1.5rem; font-weight: 400; color: #555; font-style: italic; }
 
-/* 5. Buttons - Interactive */
+/* Wellness Tips - Increased size */
+.wellness-list {
+    list-style: none;
+    text-align: left;
+    font-size: 1.25rem; /* Larger */
+}
+
+.wellness-list li {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.wellness-list li::before {
+    content: "•";
+    color: var(--blush);
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+/* Support 3D Boxes */
+.bg-alt { background-color: #fcfaff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; margin-top: 50px; }
+
+.hotline-3d {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #e2dce2, -8px -8px 16px #ffffff;
+    transition: transform 0.3s;
+}
+
+.hotline-3d:hover { transform: translateY(-8px); }
+.number { display: block; font-size: 2rem; font-weight: 800; color: var(--blush); }
+
+/* Volunteer - Fixed Squishing */
+.volunteer-area { background: var(--violet); color: #fff; padding: 120px 10%; }
+.volunteer-area h2 { color: var(--pink); }
+.volunteer-content { max-width: 800px; margin: 0 auto; }
+.volunteer-content p { font-size: 1.2rem; margin-bottom: 40px; }
+.spacer-v { height: 20px; }
+
+/* Buttons */
 .btn {
-    padding: 15px 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    background: var(--blush);
+    color: white;
+    padding: 20px 50px;
     border: none;
     border-radius: 50px;
+    font-family: inherit;
+    font-weight: 800;
     cursor: pointer;
-    transition: all 0.3s ease;
-    background: var(--violet);
-    color: white;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: var(--blush);
+    background: var(--violet);
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(222, 99, 138, 0.4);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.btn:active { transform: scale(0.95); }
-
-/* Form Styles */
-form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; }
+/* Contact Form */
+form { max-width: 600px; margin: 40px auto; }
 input, textarea {
-    padding: 15px; margin-bottom: 15px;
-    border: 2px solid var(--mimi);
-    border-radius: 10px; font-family: inherit;
+    width: 100%; padding: 20px; margin-bottom: 20px;
+    border: 2px solid var(--thistle); border-radius: 12px; font-family: inherit; font-size: 1rem;
 }
 
-.status-box { margin-top: 20px; font-weight: 600; min-height: 24px; }
-.success { color: #2ecc71; }
-.error { color: var(--blush); }
+/* Footer - Centered and Visible */
+.centered-footer {
+    background: #fff;
+    padding: 60px 20px;
+    border-top: 1px solid var(--mimi);
+    text-align: center;
+    width: 100%;
+}
+
+.footer-inner p { margin: 5px 0; color: var(--violet); font-weight: 600; }
+.uae-tag { font-size: 0.8rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 2px; }
+
+.status-box { margin-top: 20px; font-weight: 800; height: 30px; }
+.success { color: #27ae60; }
+.error { color: #e74c3c; }
