@@ -1,178 +1,140 @@
-/* --- FONTS & VARIABLES --- */
-@font-face {
-    font-family: 'Borscha';
-    src: url('Borscha.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* Color Palette Variables */
 :root {
-    --primary-teal: #2D545E;
-    --soft-teal: #82C0CC;
-    --warm-coral: #FF8C7A;
-    --lavender: #EDE7F6;
-    --text-color: #334155;
-    --white: #FFFFFF;
+    --english-violet: #4A3267;
+    --blush: #DE638A;
+    --pink: #F7B9C4;
+    --mimi-pink: #F3D9E5;
+    --thistle: #C6BADE;
+    --text-dark: #2d1f40;
 }
 
-/* --- BASE STYLES --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-    line-height: 1.8;
-    background-color: #FBFBFF;
-    scroll-behavior: smooth;
+    font-family: "Alto Pro Mono", "Courier New", monospace;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #ffffff;
 }
 
-/* --- TYPOGRAPHY --- */
-h1, h2, h3 {
-    font-family: 'Borscha', serif;
-    color: var(--primary-teal);
-    margin-bottom: 20px;
+h1, h2, h3, .logo {
+    font-family: "Bodoni Poster", "Playfair Display", serif;
+    font-weight: 900;
+    color: var(--english-violet);
 }
 
-.logo {
-    font-family: 'Borscha', serif;
-    font-size: 1.8rem;
-    letter-spacing: 6px;
-    background: linear-gradient(45deg, var(--primary-teal), var(--warm-coral));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-}
-
-/* --- LAYOUT --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
-
+/* Navigation */
 nav {
-    background: var(--white);
-    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: var(--mimi-pink);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid var(--soft-teal);
 }
 
-nav .container { display: flex; justify-content: space-between; align-items: center; }
-
-.nav-links { list-style: none; display: flex; }
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-teal);
-    font-weight: 600;
-    margin-left: 30px;
-    transition: 0.3s;
-}
-.nav-links a:hover { color: var(--warm-coral); }
-
-/* --- HERO --- */
-.hero {
-    height: 80vh;
-    background: linear-gradient(rgba(130, 192, 204, 0.7), rgba(255, 140, 122, 0.5)), 
-                url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2000');
-    background-size: cover;
-    background-position: center;
+nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
+    list-style: none;
 }
 
-.hero h2 { font-size: 4rem; color: var(--white); letter-spacing: -1px; }
+nav ul li a {
+    text-decoration: none;
+    color: var(--english-violet);
+    margin-left: 2rem;
+    font-weight: bold;
+}
 
-/* --- SECTIONS --- */
-.section { padding: 100px 0; text-align: center; }
-.bg-light { background-color: var(--lavender); }
+/* Sections */
+header {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--mimi-pink), var(--thistle));
+    text-align: center;
+}
 
-/* --- CONTACT FORM FIX --- */
-#contact-form {
-    max-width: 500px;
+header h1 { font-size: 4rem; margin-bottom: 1rem; }
+
+.section {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.bg-alt {
+    background-color: var(--pink);
+    opacity: 0.9;
+}
+
+.definition {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--blush);
+}
+
+/* Grid & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+/* Form */
+form {
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* This stacks your inputs vertically */
-    gap: 20px;
+    flex-direction: column;
 }
-
-.form-group { width: 100%; }
 
 input, textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    font-family: 'Inter', sans-serif;
-    outline: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--thistle);
+    border-radius: 5px;
+    font-family: inherit;
 }
 
-#submit-btn {
-    align-self: center; /* Centers the button in the column */
-    background: var(--warm-coral);
-    color: white;
-    padding: 15px 40px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#submit-btn:hover { background: #e77a6b; transform: translateY(-2px); }
-
-/* --- SUCCESS CARD --- */
-.success-card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    display: inline-block;
-}
-
-.success-card h3 { color: var(--warm-coral); }
-
-/* --- OTHER ELEMENTS --- */
-.crisis-box { background: white; border: 2px solid var(--warm-coral); padding: 40px; border-radius: 20px; margin-bottom: 40px; }
-.hotline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
-.hotline-item { background: #FFF0ED; padding: 20px; border-radius: 12px; }
-.hotline-item strong { display: block; font-size: 1.4rem; color: var(--warm-coral); }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-.card { background: white; padding: 40px; border-radius: 20px; border-bottom: 6px solid var(--soft-teal); }
-.p-item { background: white; margin: 10px auto; padding: 25px; max-width: 700px; border-radius: 15px; border-left: 8px solid var(--soft-teal); text-align: left; }
-
-footer { background: var(--primary-teal); color: var(--soft-teal); padding: 50px 0; }
-/* --- THE BUTTON FIX --- */
 .btn {
-    display: inline-block !important;
-    background-color: var(--warm-coral) !important; /* Ensure the coral background shows */
-    color: #FFFFFF !important; /* Force text to be white */
-    padding: 16px 40px !important;
-    text-decoration: none !important; /* REMOVES THE UNDERLINE */
-    border-radius: 50px !important;
-    font-weight: 600 !important;
-    font-family: 'Inter', sans-serif !important;
-    box-shadow: 0 10px 20px rgba(255, 140, 122, 0.3);
-    transition: all 0.3s ease;
+    background-color: var(--english-violet);
+    color: white;
+    padding: 1rem 2rem;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-}
-
-/* This stops the link from turning purple after you click it */
-.btn:visited {
-    color: #FFFFFF !important;
-    text-decoration: none !important;
+    font-family: inherit;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    background-color: #e77a6b !important;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
+    background-color: var(--blush);
 }
 
-.btn:active {
-    transform: translateY(0);
+footer {
+    padding: 2rem;
+    background: var(--english-violet);
+    color: white;
+    text-align: center;
 }
