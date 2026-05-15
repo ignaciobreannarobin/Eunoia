@@ -3,113 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eunoia | Mental Health Advocacy UAE</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Eunoia | Mental Health Advocacy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="container">
-            <h1 class="logo">EUNOIA</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#participation">Participation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <div class="logo">Eunoia</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h2>Your Voice,<br>Beautifully Minded.</h2>
-            <p>Advocating for mental health awareness and accessible support across the UAE.</p>
-            <a href="#support" class="btn">Find Support Now</a>
-        </div>
+    <header>
+        <h1>Beautiful Thinking.</h1>
+        <p>A sanctuary for mental wellness and advocacy.</p>
     </header>
 
     <section id="about" class="section">
-        <div class="container">
-            <h2>About Eunoia</h2>
-            <p class="lead-text">Eunoia, a Greek word meaning “beautiful thinking” or “a well mind,” reflects our mission to promote kindness, understanding, and positive mental well-being. At Eunoia, we aim to create a safe and supportive space where individuals can learn about mental health, find encouragement, and feel reminded that they are never alone in their journey.
-</p>
+        <h2>About Us</h2>
+        <div class="content">
+            <p class="definition"><strong>Eunoia</strong> /yoo-noy-uh/ (n.): <em>Beautiful thinking; a well-mind; goodwill.</em></p>
+            <p>Our mission is to foster a community where mental health is prioritized, understood, and supported without stigma. We believe that a "well-mind" is the foundation of a flourishing life.</p>
         </div>
     </section>
 
-    <section id="support" class="section bg-light">
-        <div class="container">
-            <h2>UAE Mental Health Support</h2>
-            
-            <div class="crisis-box">
-                <h3>Emergency & Crisis Lines</h3>
-                <div class="hotline-grid">
-                    <div class="hotline-item"><strong>999</strong>Emergency Services</div>
-                    <div class="hotline-item"><strong>800-4673</strong>HOPE Mental Support</div>
-                    <div class="hotline-item"><strong>800-111</strong>DHA (Dubai Health)</div>
-                    <div class="hotline-item"><strong>800-725462</strong>SAKINA (National)</div>
-                </div>
+    <section id="support" class="section bg-alt">
+        <h2>Support & Resources</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>UAE Emergency Hotlines</h3>
+                <ul>
+                    <li><strong>Estijaba (Mental Health):</strong> 800 1717</li>
+                    <li><strong>Amal Counseling:</strong> 800 4673 (HOPE)</li>
+                    <li><strong>Police:</strong> 999</li>
+                    <li><strong>Ambulance:</strong> 998</li>
+                </ul>
             </div>
-
-            <div class="grid">
-                <div class="card">
-                    <h3>Peer Advocacy</h3>
-                    <p>Connect with advocates who have lived experience and can walk beside you.</p>
-                </div>
-                <div class="card">
-                    <h3>Rights & Advice</h3>
-                    <p>Guidance on UAE mental health laws and workplace support rights.</p>
-                </div>
-                <div class="card">
-                    <h3>Resources</h3>
-                    <p>Self-help toolkits designed for the unique cultural context of the Emirates.</p>
-                </div>
+            <div class="card">
+                <h3>Wellness Tips</h3>
+                <ul>
+                    <li>Practice 4-7-8 breathing techniques.</li>
+                    <li>Maintain a consistent sleep schedule.</li>
+                    <li>Set boundaries with digital consumption.</li>
+                    <li>Reach out to a trusted peer today.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="participation" class="section">
-        <div class="container">
-            <h2>Get Involved</h2>
-            <div class="participation-options">
-                <div class="p-item"><strong>Volunteer:</strong> Join our team of community listeners.</div>
-                <div class="p-item"><strong>Campaign:</strong> Help us normalize mental health conversations.</div>
-                <div class="p-item"><strong>Share:</strong> Contribute your story to our "Voices" gallery.</div>
-            </div>
-        </div>
+    <section id="volunteer" class="section">
+        <h2>Volunteer</h2>
+        <p>You don't need to be a professional to be a presence. Help us organize workshops, distribute resources, or manage our community forums.</p>
+        <button class="btn">Learn How to Help</button>
     </section>
 
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2>Contact Us</h2>
-            
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="How can we help you?" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn" id="submit-btn">Send Message</button>
-            </form>
-
-            <div id="form-success" style="display: none;">
-                <div class="success-card">
-                    <h3>Submitted!</h3>
-                    <p>Thank you for reaching out. We have received your message.</p>
-                </div>
-            </div>
-        </div>
+    <section id="contact" class="section bg-alt">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="formStatus"></div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Eunoia Advocacy. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Eunoia Advocacy. Built for a Well-Mind.</p>
     </footer>
 
     <script src="script.js"></script>
