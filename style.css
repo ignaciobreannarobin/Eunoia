@@ -1,7 +1,7 @@
 /* --- FONTS & VARIABLES --- */
 @font-face {
     font-family: 'Borscha';
-    src: url('Borscha.ttf') format('truetype'); /* Ensure your font file is in the same folder */
+    src: url('Borscha.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,12 +15,8 @@
     --white: #FFFFFF;
 }
 
-/* --- RESET & BASE --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- BASE STYLES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Inter', sans-serif;
@@ -30,30 +26,25 @@ body {
     scroll-behavior: smooth;
 }
 
-/* --- TYPOGRAPHY (Borscha Focus) --- */
+/* --- TYPOGRAPHY --- */
 h1, h2, h3 {
-    font-family: 'Borscha', 'Playfair Display', serif; /* Falling back to a clean serif */
-    font-weight: 700;
+    font-family: 'Borscha', serif;
     color: var(--primary-teal);
-    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 .logo {
     font-family: 'Borscha', serif;
     font-size: 1.8rem;
-    letter-spacing: 6px; /* Elegant wide spacing for the logo */
+    letter-spacing: 6px;
     background: linear-gradient(45deg, var(--primary-teal), var(--warm-coral));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
 }
 
-/* --- LAYOUT & NAV --- */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 30px;
-}
+/* --- LAYOUT --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
 
 nav {
     background: var(--white);
@@ -64,31 +55,21 @@ nav {
     border-bottom: 2px solid var(--soft-teal);
 }
 
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+nav .container { display: flex; justify-content: space-between; align-items: center; }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
+.nav-links { list-style: none; display: flex; }
 .nav-links a {
     text-decoration: none;
     color: var(--primary-teal);
     font-weight: 600;
     margin-left: 30px;
-    font-size: 0.9rem;
     transition: 0.3s;
 }
-
 .nav-links a:hover { color: var(--warm-coral); }
 
-/* --- HERO SECTION --- */
+/* --- HERO --- */
 .hero {
-    height: 85vh;
+    height: 80vh;
     background: linear-gradient(rgba(130, 192, 204, 0.7), rgba(255, 140, 122, 0.5)), 
                 url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=2000');
     background-size: cover;
@@ -100,95 +81,65 @@ nav .container {
     color: var(--white);
 }
 
-.hero h2 {
-    font-family: 'Borscha', serif;
-    font-size: 4.5rem;
-    color: var(--white);
-    line-height: 1.1;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
+.hero h2 { font-size: 4rem; color: var(--white); letter-spacing: -1px; }
 
-/* --- BUTTONS --- */
-.btn {
-    display: inline-block;
-    background: var(--warm-coral);
-    color: var(--white);
-    padding: 18px 45px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: 0 10px 20px rgba(255, 140, 122, 0.3);
-    transition: 0.3s ease;
-    border: none;
-}
-
-.btn:hover { transform: translateY(-3px); background: #e77a6b; }
-
-/* --- SECTIONS & CARDS --- */
+/* --- SECTIONS --- */
 .section { padding: 100px 0; text-align: center; }
 .bg-light { background-color: var(--lavender); }
 
-.crisis-box {
-    background: var(--white);
-    border: 2px solid var(--warm-coral);
-    padding: 40px;
-    border-radius: 20px;
-    margin: 40px 0;
+/* --- CONTACT FORM FIX --- */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* This stacks your inputs vertically */
+    gap: 20px;
 }
 
-.hotline-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-}
+.form-group { width: 100%; }
 
-.hotline-item {
-    background: #FFF0ED;
-    padding: 20px;
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
 }
 
-.hotline-item strong {
-    display: block;
-    font-size: 1.4rem;
-    color: var(--warm-coral);
-    font-family: 'Borscha', serif;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 20px;
-    border-bottom: 6px solid var(--soft-teal);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+#submit-btn {
+    align-self: center; /* Centers the button in the column */
+    background: var(--warm-coral);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.card:hover { transform: translateY(-10px); }
+#submit-btn:hover { background: #e77a6b; transform: translateY(-2px); }
 
-.p-item {
-    background: var(--white);
-    margin: 10px auto;
-    padding: 25px;
-    max-width: 700px;
-    border-radius: 15px;
-    border-left: 8px solid var(--soft-teal);
-    text-align: left;
+/* --- SUCCESS CARD --- */
+.success-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: inline-block;
 }
 
-/* --- FOOTER --- */
-footer {
-    background: var(--primary-teal);
-    color: var(--soft-teal);
-    padding: 60px 0;
-    text-align: center;
-}
+.success-card h3 { color: var(--warm-coral); }
+
+/* --- OTHER ELEMENTS --- */
+.crisis-box { background: white; border: 2px solid var(--warm-coral); padding: 40px; border-radius: 20px; margin-bottom: 40px; }
+.hotline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+.hotline-item { background: #FFF0ED; padding: 20px; border-radius: 12px; }
+.hotline-item strong { display: block; font-size: 1.4rem; color: var(--warm-coral); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+.card { background: white; padding: 40px; border-radius: 20px; border-bottom: 6px solid var(--soft-teal); }
+.p-item { background: white; margin: 10px auto; padding: 25px; max-width: 700px; border-radius: 15px; border-left: 8px solid var(--soft-teal); text-align: left; }
+
+footer { background: var(--primary-teal); color: var(--soft-teal); padding: 50px 0; }
