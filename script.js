@@ -1,38 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Contact Form Logic
     const contactForm = document.getElementById('contact-form');
-    const responseMessage = document.getElementById('form-response');
+    const successMessage = document.getElementById('form-success');
 
-    if(contactForm) {
+    if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            responseMessage.innerHTML = `
-                <div style="margin-top: 20px; padding: 15px; background: #d4edda; color: #155724; border-radius: 10px; font-weight: 600;">
-                    Your message has been sent. A Eunoia advocate will reach out soon.
-                </div>`;
-            contactForm.reset();
+            e.preventDefault(); // Stop the form from actually trying to send
+            
+            // Hide the form and show the "Submitted!" card
+            contactForm.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            // Scroll to the message so the user sees it
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     }
 
-    // 2. Smooth Reveal Animation on Scroll
-    const observerOptions = { threshold: 0.1 };
-
-    const revealOnScroll = (entries) => {
+    // Scroll Reveal Effect
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 entry.target.style.opacity = "1";
                 entry.target.style.transform = "translateY(0)";
             }
         });
-    };
+    }, { threshold: 0.1 });
 
-    const scrollObserver = new IntersectionObserver(revealOnScroll, observerOptions);
-    
     document.querySelectorAll('.section').forEach(section => {
         section.style.opacity = "0";
         section.style.transform = "translateY(30px)";
         section.style.transition = "all 0.8s ease-out";
-        scrollObserver.observe(section);
+        observer.observe(section);
     });
 });
