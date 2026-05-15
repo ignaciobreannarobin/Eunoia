@@ -143,3 +143,36 @@ input, textarea {
 .p-item { background: white; margin: 10px auto; padding: 25px; max-width: 700px; border-radius: 15px; border-left: 8px solid var(--soft-teal); text-align: left; }
 
 footer { background: var(--primary-teal); color: var(--soft-teal); padding: 50px 0; }
+/* --- THE BUTTON FIX --- */
+.btn {
+    display: inline-block !important;
+    background-color: var(--warm-coral) !important; /* Ensure the coral background shows */
+    color: #FFFFFF !important; /* Force text to be white */
+    padding: 16px 40px !important;
+    text-decoration: none !important; /* REMOVES THE UNDERLINE */
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+    box-shadow: 0 10px 20px rgba(255, 140, 122, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* This stops the link from turning purple after you click it */
+.btn:visited {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #e77a6b !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
